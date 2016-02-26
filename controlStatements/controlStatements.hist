@@ -1,0 +1,454 @@
+A = [1 2;3 4;5 6]
+size(A)
+sz = size(A)
+size(sz)
+sz(1)
+size(A,1)
+history()
+size(A,2)
+v=[1 2 3 4]
+length(v)
+length(A)
+disp(A)
+cd ml
+load featureX.dat 
+load featureY.dat 
+who
+clear featureY
+who
+load priceY.dat 
+who
+featureX
+priceY
+size(featureX)
+size(priceY)
+who
+whos
+v=priceY(1:5)
+save hello.mat v;
+whos
+clear
+whos
+load hello.mat 
+whos
+v
+load featureX.dat 
+X=featureX(1:5)
+save Xdata.txt X -ascii
+x
+X
+A = [1  2;3 4;5 6]
+A(3,2)
+A(3,:) %: means all the elements
+A(:,2) %: means all the elements along that row/column
+A([1 3],:)
+A
+A(3,:)
+A(:,2)
+A(:,2)=[10;11;12]
+A=[A,[100,101,102]] % append another column to the vector
+A
+A=[A,[100;101;102]] % append another column to the vector
+[100,101,102]
+[100;101;102]
+size(A)
+A(:) % put all elements of A into single vector
+A
+A=[1 2;3 4;5 6]
+B=[11 12;13 14;15 16]
+C=[A B]
+C=[A;B]
+save movingData
+history -w movigData.hist
+save movingData.var
+clear
+# Octave 3.8.1, Wed Feb 24 10:20:36 2016 PST <ajit@ubuntu>
+%computing data
+# Octave 3.8.1, Wed Feb 24 10:47:38 2016 PST <ajit@ubuntu>
+eye(5)
+pw
+pwd
+cd ..
+ls
+cd assignments/
+ls
+cd machine-learning-ex1
+ls
+cd ex1
+ls
+ex1
+warmUpExercise()
+clear
+pwd
+cd ../../
+pwd
+cd ..
+cd computingData/
+clear
+reset
+A = [1 2;3 4;5 6]
+B = [11 12;13 14;15 16]
+c = [1 1; 2 2]
+A*C
+clear c
+C = [1 1; 2 2]
+A*C
+A .* B
+A
+B
+A .^ B
+format short
+A .^ B
+A .^ 2
+v = [1;2;3]
+1 ./v
+log(v)
+abs(v)
+abs([-1;-2;-3])
+exp(v)
+-v
+v + ones(length(v),1)
+ones(3,1)
+v + ones(3,1)
+v + 1
+A
+A'
+(A')'
+[val,ind]=max(Q)
+[val,ind]=max(A)
+a = [1 15 2 0.3]
+val=max(a)
+[val,ind]=max(a)
+a < 3
+find(a<3)
+A = magic(3)
+help magic
+A
+[r,c] = find(A >= 7)
+[1,1]
+A(1,1)
+A(2,3)
+A(2,3) % these are the elements which are >= 7
+help find
+a
+sum(a)
+prod(a) % returns product of all elements
+floor(a)
+ceil(a)
+rand(3)
+max(rand(3))
+r=rand(3)
+max(r)
+max(rand(3),rand(3))
+A
+max(A,[],1)
+% max(A,[],1) here 1 denotes the 1st dimension of vector i,e column
+max(A,[],2)
+max(A,[],3)
+max(A,[],4)
+max(A)
+max(max(A))
+A(:)
+A = magic(9)
+sum(A,1)
+sum(A,2)
+A
+eye(9)
+A * eye(9)
+A .* eye(9)
+sum(A.*eye(9))
+sum(sum(A.*eye(9)))
+flipud(eye(90)
+)
+flipud(eye(9)
+)
+sum(sum(A .* flipud(eye(9))))
+A = magic(3)
+pinv(A)
+temp = pinv(A)
+temp * A
+A
+pwd
+save computingData.var
+history -w computingData.hist
+# Octave 3.8.1, Thu Feb 25 06:23:47 2016 PST <ajit@ubuntu>
+cd ../
+cd assignments/
+ls
+cd machine-learning-ex1
+cd ex1
+ls
+x =load('ex1data1.txt')
+data =load('ex1data1.txt')
+data =load('ex1data1.txt');
+clear x;
+x=data(:,1);
+x
+y=data(:,2);
+y
+plot(x,y)
+length(y)
+length(x)
+help figure
+figure(m)
+figure(97)
+# Octave 3.8.1, Thu Feb 25 09:13:33 2016 PST <ajit@ubuntu>
+pwd
+t=[0:0.01:0.98]
+y1=sin(2*pi*4*t);
+plot(t,y1);
+y2=cos(2*pi*4*t);
+plot(t,y2);
+plot(t,y1);
+hold on;
+plot(t,y2,'r');
+xlable('time')
+xlable(time)
+xlabel(time)
+ylabel(value)
+ylabel('value')
+xlabel('time')
+legend('sin','cos')
+title('my plot')
+print -dpng 'myplot.png';
+close
+figure(1); plot(t,y1);
+figure(2); plot(t,y2);
+close
+close
+subplot(1,2,1); % Divides plot a 1x2 grid, access first element
+plot(t,y1);
+subplot(1,2,2);
+plot(t,y2);
+axis([0.5 1 -1 1])
+print -djpg 'subplot.jpeg'
+clf;
+A = magic(5)
+imagesc(A)
+imagesc(A),colorbar
+imagesc(A),colorbar,colormap gray;
+imagesc(A),colorbar
+pint -djpg 'colorbar.jpg'
+print -djpg 'colorbar.jpg'
+imagesc(magic(15),colorbar
+imagesc(magic(15)),colorbar
+a=1,b=2,c=3;
+a=1,b=2,c=3
+pwd
+history -w 'plottingData.hist'
+save 'plottingData.var'
+ls
+cd ..
+ls
+cd assignments/
+ls
+cd machine-learning-ex1
+cd ex1
+ls
+data = load('ex1data1.txt');
+X = data(:, 1); y = data(:, 2);
+m = length(y); % number of training examples
+% Plot Data
+% Note: You have to complete the code in plotData.m
+plotData(X, y);
+plotData(X, y);
+close;
+close;
+ex1
+X = [ones(m, 1), data(:,1)];
+X
+size(X)
+close;
+theta = zeros(2, 1);
+theta;
+theta
+sum((theta' * X - y)^2);
+theta'
+theta' * X
+size(X)
+y
+theta= pinv(X' * X) * X' * y
+X(:2)
+X(:,2)
+theta= pinv(X' * X) * X' * y
+theta(1)
+theta(2)
+h=theta(1)*X(:,1)+theta(2)*X(:,2);
+h
+(h-y)^2;
+(h-y).^2;
+sqr=(h-y).^2;
+sum(sqr)
+m=length(y)
+sum(sqr)/m
+sum(sqr)/2m
+sum(sqr)/2*m
+size(sqr)
+h=0*X(:,1)+0*X(:,2);
+sqr=(h-y).^2;
+sum(sqr)
+sum(sqr)/2*m
+sum(sqr)/m
+sm=sum(sqr)/m
+sm/2
+sum(sqr)/(m*2)
+theta(0)
+theta(1)
+theta=zeros[2,1]
+theta=zeros[2;1];
+theta=zeros(2;1);
+theta=zeros(2,1);
+theta
+theta(0)
+theta(1)
+theta(2)
+X = [ones(m, 1), data(:,1)]; % Add a column of ones to x
+theta = zeros(2, 1); % initialize fitting parameters
+% Some gradient descent settings
+iterations = 1500;
+alpha = 0.01;
+% compute and display initial cost
+computeCost(X, y, theta)
+computeCost(X, y, theta)
+ex1
+l
+close;
+close;
+J_history = zeros(num_iters, 1);
+J_history = zeros(1500, 1);
+J_history
+theta = gradientDescent(X, y, theta, alpha, iterations);
+size(delta)
+hX=theta(1) * X(:,1) + theta(2) * X(:,2); % set htheta(x) X[:,1] --> x0 and X[:,2] --> x1; theta(1) --> theta0 and theta(2) --> theta1
+delta= (hX - y);
+size(delta)
+X(1,2)
+X(3,2)
+X(4,2)
+theta = gradientDescent(X, y, theta, alpha, iterations);
+theta = gradientDescent(X, y, theta, alpha, iterations);
+A(I,J)
+A
+theta = gradientDescent(X, y, theta, alpha, iterations);
+theta = gradientDescent(X, y, theta, alpha, iterations);
+theta = gradientDescent(X, y, theta, alpha, iterations);
+theta
+theta = gradientDescent(X, y, theta, alpha, iterations);
+hX=theta(1) * X(:,1) + theta(2) * X(:,2);
+delta= (hX - y);
+temp0= theta(1) - alpha * (sum(delta)/m);
+temp1= theta(2) - alpha * (sum(delta * X(iter,2))/m);
+temp1= theta(2) - alpha * (sum(delta * X(97,2))/m);
+temp0
+temp1
+theta(1)=temp0;
+theta(2)=temp1;
+J_history(97) = computeCost(X, y, theta);
+J_history(97)
+J_history
+theta
+size(delta)
+delta(5:1)
+delta(5,1)
+delta(1:5)
+theta = gradientDescent(X, y, theta, alpha, iterations);
+ls
+data = load('ex1data1.txt');
+size(data)
+theta = gradientDescent(X, y, theta, alpha, iterations);
+theta = gradientDescent(X, y, theta, alpha, iterations);
+theta = gradientDescent(X, y, theta, alpha, iterations);
+theta
+J_history
+computeCost(X, y, theta)
+size(J_history)
+J_history(1)
+ex1
+close
+close
+close
+close
+close
+ex1
+close
+close
+close
+ex1
+close;
+close;
+close;
+ls
+submit
+# Octave 3.8.1, Thu Feb 25 14:38:01 2016 PST <ajit@ubuntu>
+ex1
+ls
+X
+# Octave 3.8.1, Fri Feb 26 02:53:58 2016 PST <ajit@ubuntu>
+v=zeros(10);
+v
+v=zeros(10,1);
+v
+for i=1:10,
+v(i)=2^i;
+end;
+v
+indices=1:10;
+indices
+for i=indices,
+disp(i);
+end;
+i=1;
+while i <= 5,
+v(i)=100;
+i=i+1;
+end;
+v
+i=1;
+while true,
+v(i)=999;
+i=i+1;
+if i ==6
+break;
+end;
+end;
+v
+v(1)
+v(1)=2;
+if v(1)==1,
+disp('The value is one');
+elseif v(1)==2,
+disp('The value is two');
+else
+disp('The value is not one or two. ');
+end;
+squareNumber(2);
+squareNumber(2)
+squareNumber(5)
+pwd
+addpath('/home/ajit/ml/controlStatements')
+cd ..
+pwd
+squareNumber(5)
+squareAndcube(2)
+squareAndcube(2)
+[a,b]= squareAndcube(5);
+a
+b
+X = [1 1;1 2;1 3];
+X
+theta=[0;1]
+y = [1;2;3]
+size(X)
+costFunction(X,y,theta)
+costFunction(X,y,theta)
+costFunction(X,y,theta)
+(X,1)
+size(X)
+size(X,1)
+size(X,2)
+size(X,3)
+size(X,4)
+size(X,1)
+pwd
+cd controlStatements/
+history -w 'controlStatements.hist'

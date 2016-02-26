@@ -1,0 +1,238 @@
+A = [1 2;3 4;5 6]
+size(A)
+sz = size(A)
+size(sz)
+sz(1)
+size(A,1)
+history()
+size(A,2)
+v=[1 2 3 4]
+length(v)
+length(A)
+disp(A)
+cd ml
+load featureX.dat 
+load featureY.dat 
+who
+clear featureY
+who
+load priceY.dat 
+who
+featureX
+priceY
+size(featureX)
+size(priceY)
+who
+whos
+v=priceY(1:5)
+save hello.mat v;
+whos
+clear
+whos
+load hello.mat 
+whos
+v
+load featureX.dat 
+X=featureX(1:5)
+save Xdata.txt X -ascii
+x
+X
+A = [1  2;3 4;5 6]
+A(3,2)
+A(3,:) %: means all the elements
+A(:,2) %: means all the elements along that row/column
+A([1 3],:)
+A
+A(3,:)
+A(:,2)
+A(:,2)=[10;11;12]
+A=[A,[100,101,102]] % append another column to the vector
+A
+A=[A,[100;101;102]] % append another column to the vector
+[100,101,102]
+[100;101;102]
+size(A)
+A(:) % put all elements of A into single vector
+A
+A=[1 2;3 4;5 6]
+B=[11 12;13 14;15 16]
+C=[A B]
+C=[A;B]
+save movingData
+history -w movigData.hist
+save movingData.var
+clear
+# Octave 3.8.1, Wed Feb 24 10:20:36 2016 PST <ajit@ubuntu>
+%computing data
+# Octave 3.8.1, Wed Feb 24 10:47:38 2016 PST <ajit@ubuntu>
+eye(5)
+pw
+pwd
+cd ..
+ls
+cd assignments/
+ls
+cd machine-learning-ex1
+ls
+cd ex1
+ls
+ex1
+warmUpExercise()
+clear
+pwd
+cd ../../
+pwd
+cd ..
+cd computingData/
+clear
+reset
+A = [1 2;3 4;5 6]
+B = [11 12;13 14;15 16]
+c = [1 1; 2 2]
+A*C
+clear c
+C = [1 1; 2 2]
+A*C
+A .* B
+A
+B
+A .^ B
+format short
+A .^ B
+A .^ 2
+v = [1;2;3]
+1 ./v
+log(v)
+abs(v)
+abs([-1;-2;-3])
+exp(v)
+-v
+v + ones(length(v),1)
+ones(3,1)
+v + ones(3,1)
+v + 1
+A
+A'
+(A')'
+[val,ind]=max(Q)
+[val,ind]=max(A)
+a = [1 15 2 0.3]
+val=max(a)
+[val,ind]=max(a)
+a < 3
+find(a<3)
+A = magic(3)
+help magic
+A
+[r,c] = find(A >= 7)
+[1,1]
+A(1,1)
+A(2,3)
+A(2,3) % these are the elements which are >= 7
+help find
+a
+sum(a)
+prod(a) % returns product of all elements
+floor(a)
+ceil(a)
+rand(3)
+max(rand(3))
+r=rand(3)
+max(r)
+max(rand(3),rand(3))
+A
+max(A,[],1)
+% max(A,[],1) here 1 denotes the 1st dimension of vector i,e column
+max(A,[],2)
+max(A,[],3)
+max(A,[],4)
+max(A)
+max(max(A))
+A(:)
+A = magic(9)
+sum(A,1)
+sum(A,2)
+A
+eye(9)
+A * eye(9)
+A .* eye(9)
+sum(A.*eye(9))
+sum(sum(A.*eye(9)))
+flipud(eye(90)
+)
+flipud(eye(9)
+)
+sum(sum(A .* flipud(eye(9))))
+A = magic(3)
+pinv(A)
+temp = pinv(A)
+temp * A
+A
+pwd
+save computingData.var
+history -w computingData.hist
+# Octave 3.8.1, Thu Feb 25 06:23:47 2016 PST <ajit@ubuntu>
+cd ../
+cd assignments/
+ls
+cd machine-learning-ex1
+cd ex1
+ls
+x =load('ex1data1.txt')
+data =load('ex1data1.txt')
+data =load('ex1data1.txt');
+clear x;
+x=data(:,1);
+x
+y=data(:,2);
+y
+plot(x,y)
+length(y)
+length(x)
+help figure
+figure(m)
+figure(97)
+# Octave 3.8.1, Thu Feb 25 09:13:33 2016 PST <ajit@ubuntu>
+pwd
+t=[0:0.01:0.98]
+y1=sin(2*pi*4*t);
+plot(t,y1);
+y2=cos(2*pi*4*t);
+plot(t,y2);
+plot(t,y1);
+hold on;
+plot(t,y2,'r');
+xlable('time')
+xlable(time)
+xlabel(time)
+ylabel(value)
+ylabel('value')
+xlabel('time')
+legend('sin','cos')
+title('my plot')
+print -dpng 'myplot.png';
+close
+figure(1); plot(t,y1);
+figure(2); plot(t,y2);
+close
+close
+subplot(1,2,1); % Divides plot a 1x2 grid, access first element
+plot(t,y1);
+subplot(1,2,2);
+plot(t,y2);
+axis([0.5 1 -1 1])
+print -djpg 'subplot.jpeg'
+clf;
+A = magic(5)
+imagesc(A)
+imagesc(A),colorbar
+imagesc(A),colorbar,colormap gray;
+imagesc(A),colorbar
+pint -djpg 'colorbar.jpg'
+print -djpg 'colorbar.jpg'
+imagesc(magic(15),colorbar
+imagesc(magic(15)),colorbar
+a=1,b=2,c=3;
+a=1,b=2,c=3
+pwd
+history -w 'plottingData.hist'

@@ -1,0 +1,91 @@
+# Created by Octave 3.8.1, Thu Feb 25 05:59:49 2016 PST <ajit@ubuntu>
+# name: A
+# type: matrix
+# rows: 3
+# columns: 3
+ 8 1 6
+ 3 5 7
+ 4 9 2
+
+
+# name: B
+# type: matrix
+# rows: 3
+# columns: 2
+ 11 12
+ 13 14
+ 15 16
+
+
+# name: C
+# type: matrix
+# rows: 2
+# columns: 2
+ 1 1
+ 2 2
+
+
+# name: a
+# type: matrix
+# rows: 1
+# columns: 4
+ 1 15 2 0.3
+
+
+# name: ans
+# type: sq_string
+# elements: 1
+# length: 27
+/home/ajit/ml/computingData
+
+
+# name: c
+# type: lazy_index
+# name: index_value
+# type: matrix
+# rows: 3
+# columns: 1
+ 1
+ 2
+ 3
+
+
+
+
+# name: ind
+# type: scalar
+2
+
+
+# name: r
+# type: matrix
+# rows: 3
+# columns: 3
+ 0.1430005570217066 0.9129766261582855 0.9214634867077384
+ 0.009917525791845395 0.2468333355913432 0.6289311698711796
+ 0.03070020252057597 0.8062128502849376 0.1704409856318397
+
+
+# name: temp
+# type: matrix
+# rows: 3
+# columns: 3
+ 0.1472222222222228 -0.1444444444444455 0.0638888888888894
+ -0.06111111111111214 0.02222222222222429 0.1055555555555545
+ -0.01944444444444388 0.1888888888888878 -0.1027777777777773
+
+
+# name: v
+# type: matrix
+# rows: 3
+# columns: 1
+ 1
+ 2
+ 3
+
+
+# name: val
+# type: scalar
+15
+
+

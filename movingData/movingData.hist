@@ -1,0 +1,62 @@
+A = [1 2;3 4;5 6]
+size(A)
+sz = size(A)
+size(sz)
+sz(1)
+size(A,1)
+history()
+size(A,2)
+v=[1 2 3 4]
+length(v)
+length(A)
+disp(A)
+cd ml
+load featureX.dat 
+load featureY.dat 
+who
+clear featureY
+who
+load priceY.dat 
+who
+featureX
+priceY
+size(featureX)
+size(priceY)
+who
+whos
+v=priceY(1:5)
+save hello.mat v;
+whos
+clear
+whos
+load hello.mat 
+whos
+v
+load featureX.dat 
+X=featureX(1:5)
+save Xdata.txt X -ascii
+x
+X
+A = [1  2;3 4;5 6]
+A(3,2)
+A(3,:) %: means all the elements
+A(:,2) %: means all the elements along that row/column
+A([1 3],:)
+A
+A(3,:)
+A(:,2)
+A(:,2)=[10;11;12]
+A=[A,[100,101,102]] % append another column to the vector
+A
+A=[A,[100;101;102]] % append another column to the vector
+[100,101,102]
+[100;101;102]
+size(A)
+A(:) % put all elements of A into single vector
+A
+A=[1 2;3 4;5 6]
+B=[11 12;13 14;15 16]
+C=[A B]
+C=[A;B]
+save movingData
+history -w movigData.hist

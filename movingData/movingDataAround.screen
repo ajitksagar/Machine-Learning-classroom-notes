@@ -1,0 +1,466 @@
+   71 format free
+   72 sqrt(-1)
+   73 help -i
+   74 help -i
+   75 help help
+   76 help --list
+   77 issorted(2,35)
+   78 MODE="ascending"
+   79 issorted(2,35)
+   80 MODE=ascending
+   81 help mode
+   82 a(2,3,6,1,9,1,4,1)
+   83 a=(2,3,6,1,9,1,4,1)
+   84 a = (2,3,6,1,9,1,4,1)
+   85 # Octave 3.8.1, Sun Feb 21 10:45:23 2016 PST <ajit@ubuntu>
+   86 load sesson1
+   87 ls
+   88 pwd
+   89 load session1
+   90 help
+   91 histroy
+   92 list
+   93 who
+   94 clear a
+   95 a
+   96 A
+   97 v
+   98 h
+   99 history()
+octave:10> history() >> commands
+error: 'commands' undefined near line 1 column 14
+octave:10> history() > commands
+error: 'commands' undefined near line 1 column 13
+octave:10> help history
+'history' is a built-in function from the file libinterp/corefcn/oct-hist.cc
+
+ -- Command: history
+ -- Command: history OPT1 ...
+ -- Built-in Function: H = history ()
+ -- Built-in Function: H = history (OPT1, ...)
+     If invoked with no arguments, 'history' displays a list of commands
+     that you have executed.  Valid options are:
+
+     'N'
+     '-N'
+          Display only the most recent N lines of history.
+
+     '-c'
+          Clear the history list.
+
+     '-q'
+          Don't number the displayed lines of history.  This is useful
+          for cutting and pasting commands using the X Window System.
+
+     '-r FILE'
+          Read the file FILE, appending its contents to the current
+          history list.  If the name is omitted, use the default history
+          file (normally '~/.octave_hist').
+
+     '-w FILE'
+          Write the current history to the file FILE.  If the name is
+          omitted, use the default history file (normally
+          '~/.octave_hist').
+
+     For example, to display the five most recent commands that you have
+     typed without displaying line numbers, use the command 'history -q
+     5'.
+
+     If invoked with a single output argument, the history will be saved
+     to that argument as a cell string and will not be output to screen.
+
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+octave:11> history -N
+error: history: unrecognized option '-N'
+octave:11> history(N)
+error: 'N' undefined near line 1 column 9
+error: evaluating argument list element number 1
+octave:11> history(2)
+  104 history(N)
+  105 history(2)
+octave:12> history(10)
+   97 v
+   98 h
+   99 history()
+  100 history() >> commands
+  101 history() > commands
+  102 help history
+  103 history -N
+  104 history(N)
+  105 history(2)
+  106 history(10)
+octave:13> history(-w commands)
+parse error:
+
+  syntax error
+
+>>> history(-w commands)
+                      ^
+
+octave:13> history -w '~/commands'
+octave:14> cd ~/
+octave:15> ls
+1  blog  commands  Desktop  Documents  Downloads  examples.desktop  Music  octave-workspace  Pictures  Public  session1  Templates  trace  Videos
+octave:16> cat commands
+error: invalid conversion from string to real scalar
+error: octave_base_value::int_value (): wrong type argument 'sq_string'
+error: cat: DIM must be an integer
+octave:16> 
+octave:16> history -c
+octave:17> history()
+    1 history()
+octave:18> A=[1 2;3 4;5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:19> history()
+    1 history()
+    2 A=[1 2;3 4;5 6]
+    3 history()
+octave:20> history -c
+octave:21> 
+octave:21> A = [1 2;3 4;5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:22> size(A)
+ans =
+
+   3   2
+
+octave:23> sz = size(A)
+sz =
+
+   3   2
+
+octave:24> size(sz)
+ans =
+
+   1   2
+
+octave:25> sz(1)
+ans =  3
+octave:26> size(A,1)
+ans =  3
+octave:27> history()
+    1 A = [1 2;3 4;5 6]
+    2 size(A)
+    3 sz = size(A)
+    4 size(sz)
+    5 sz(1)
+    6 size(A,1)
+    7 history()
+octave:28> size(A,2)
+ans =  2
+octave:29> v=[1 2 3 4]
+v =
+
+   1   2   3   4
+
+octave:30> length(v)
+ans =  4
+octave:31> length(A)
+ans =  3
+octave:32> disp(A)
+   1   2
+   3   4
+   5   6
+octave:33> cd ml
+octave:34> load featureX.dat 
+octave:35> load featureY.dat 
+octave:36> who
+Variables in the current scope:
+
+A         ans       b         c         featureX  featureY  sz        v
+
+octave:37> clear featureY
+octave:38> who
+Variables in the current scope:
+
+A         ans       b         c         featureX  sz        v
+
+octave:39> load pri
+priceY.dat                   print                        print_struct_array_contents  printd                       prism                        
+primes                       print_empty_dimensions       print_usage                  printf                       
+octave:39> load priceY.dat 
+octave:40> 
+octave:40> who
+Variables in the current scope:
+
+A         ans       b         c         featureX  priceY    sz        v
+
+octave:41> featureX
+featureX =
+
+   1234      2
+   2314      3
+   3421      4
+   2314      2
+   5434      4
+   1321      2
+   1123      1
+   3423      3
+   3421      2
+   2314      3
+
+octave:42> priceY
+priceY =
+
+   2342
+   1234
+   4323
+   2345
+   6543
+   2342
+   4324
+   3456
+   3245
+   5432
+
+octave:43> size(featureX)
+ans =
+
+   10    2
+
+octave:44> size(priceY)
+ans =
+
+   10    1
+
+octave:45> who
+Variables in the current scope:
+
+A         ans       b         c         featureX  priceY    sz        v
+
+octave:46> whos
+Variables in the current scope:
+
+   Attr Name          Size                     Bytes  Class
+   ==== ====          ====                     =====  ===== 
+        A             3x2                         48  double
+        ans           1x2                         16  double
+        b             1x2                          2  char
+        c             2x3                         48  double
+        featureX     10x2                        160  double
+        priceY       10x1                         80  double
+        sz            1x2                         16  double
+        v             1x4                         32  double
+
+Total is 52 elements using 402 bytes
+
+octave:47> v=priceY(1:5)
+v =
+
+   2342
+   1234
+   4323
+   2345
+   6543
+
+octave:48> save hello.mat v;
+octave:49> 
+octave:49> whos
+Variables in the current scope:
+
+   Attr Name          Size                     Bytes  Class
+   ==== ====          ====                     =====  ===== 
+        A             3x2                         48  double
+        ans           1x2                         16  double
+        b             1x2                          2  char
+        c             2x3                         48  double
+        featureX     10x2                        160  double
+        priceY       10x1                         80  double
+        sz            1x2                         16  double
+        v             5x1                         40  double
+
+Total is 53 elements using 410 bytes
+
+octave:50> clear
+octave:51> whos
+octave:52> load hello.mat 
+octave:53> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        v           5x1                         40  double
+
+Total is 5 elements using 40 bytes
+
+octave:54> v
+v =
+
+   2342
+   1234
+   4323
+   2345
+   6543
+
+octave:55> load featureX.dat 
+octave:56> X=featureX(1:5)
+X =
+
+   1234   2314   3421   2314   5434
+
+octave:57> save Xdata.txt X -ascii
+octave:58> x
+error: 'x' undefined near line 1 column 1
+octave:58> X
+X =
+
+   1234   2314   3421   2314   5434
+
+octave:59> A = [1  2;3 4;5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:60> A(3,2)
+ans =  6
+octave:61> A(3,:) %: means all the elements
+ans =
+
+   5   6
+
+octave:62> A(:,2) %: means all the elements along that row/column
+ans =
+
+   2
+   4
+   6
+
+octave:63> A([1 3],:)
+ans =
+
+   1   2
+   5   6
+
+octave:64> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:65> A(3,:)
+ans =
+
+   5   6
+
+octave:66> A(:,2)
+ans =
+
+   2
+   4
+   6
+
+octave:67> A(:,2)=[10;11;12]
+A =
+
+    1   10
+    3   11
+    5   12
+
+octave:68> A=[A,[100,101,102]] % append another column to the vector
+error: horizontal dimensions mismatch (3x2 vs 1x3)
+octave:68> A
+A =
+
+    1   10
+    3   11
+    5   12
+
+octave:69> A=[A,[100;101;102]] % append another column to the vector
+A =
+
+     1    10   100
+     3    11   101
+     5    12   102
+
+octave:70> [100,101,102]
+ans =
+
+   100   101   102
+
+octave:71> [100;101;102]
+ans =
+
+   100
+   101
+   102
+
+octave:72> size(A)
+ans =
+
+   3   3
+
+octave:73> A(:) % put all elements of A into single vector
+ans =
+
+     1
+     3
+     5
+    10
+    11
+    12
+   100
+   101
+   102
+
+octave:74> A
+A =
+
+     1    10   100
+     3    11   101
+     5    12   102
+
+octave:75> A=[1 2;3 4;5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:76> B=[11 12;13 14;15 16]
+B =
+
+   11   12
+   13   14
+   15   16
+
+octave:77> C=[A B]
+C =
+
+    1    2   11   12
+    3    4   13   14
+    5    6   15   16
+
+octave:78> C=[A;B]
+C =
+
+    1    2
+    3    4
+    5    6
+   11   12
+   13   14
+   15   16
+
+octave:79> save movingData
+octave:80> history -w movigData.hist
+octave:81> 
+
